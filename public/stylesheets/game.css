@@ -45,12 +45,15 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    transition: opacity 0.18s ease-in-out;
 }
+
 
 .item:hover {
     user-select: none;
-}
+    opacity: 0.5;
 
+}
 
 .toolbox {
     min-width: 320px;

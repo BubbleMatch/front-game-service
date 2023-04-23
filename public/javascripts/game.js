@@ -31,9 +31,15 @@ function init() {
         img.classList.add("item");
         img.id = `item${i}`
 
+        img.addEventListener('click', function () {
+            img.style.transform = "translateY(-15px) scale(0.95)";
+            img.style.opacity = "0.5"
+        })
+
         img.addEventListener('dragstart', (event) => {
             event.preventDefault();
         });
+
         img.addEventListener('dragover', (event) => {
             event.preventDefault();
         });
