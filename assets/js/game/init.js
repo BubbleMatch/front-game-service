@@ -20,10 +20,7 @@ window.onload = function () {
     loadercontainer.style.display = 'none';
 };
 
-
-function init() {
-
-
+export default function init() {
     for (let i = 0; i < 100; i++) {
         const img = document.createElement('img');
         img.src = sourceImg.src;
@@ -32,8 +29,7 @@ function init() {
         img.id = `item${i}`
 
         img.addEventListener('click', function () {
-            img.style.transform = "translateY(-15px) scale(0.95)";
-            img.style.opacity = "0.5"
+            img.classList.add("opened")
         })
 
         img.addEventListener('dragstart', (event) => {
@@ -47,5 +43,3 @@ function init() {
         gamefield.insertAdjacentElement('afterbegin', img);
     }
 }
-
-init();
