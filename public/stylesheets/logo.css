@@ -2,7 +2,10 @@
 .navigationMenu {
     display: flex;
     margin: 20px 5% 141px;
+    flex: 1;
 }
+
+
 .navigationMenu .left{
     display: flex;
     flex-direction: row;

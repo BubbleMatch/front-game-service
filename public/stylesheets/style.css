@@ -3,6 +3,10 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
 }
 .loader-container {
     display: flex;

@@ -2,17 +2,39 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    background-image: url("/images/bg2.png");
     user-select: none;
     padding: 5px;
+    background: rgb(66 72 77 / 100%);
+    border-radius: 0 0 10px 10px;
 }
 
-.wrapper {
+.bg {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 53%;
+}
 
+
+.bg::after {
+    display: inherit;
+    position: relative;
+    content: '';
+    height: 5px;
+    bottom: 5px;
+    z-index: 2;
+    width: 100%;
+    background: #6b1718;
+    border-radius: 0 0 10px 10px;
+}
+
+
+.wrapper {
     display: flex;
     align-items: center;
     flex-direction: row;
     place-content: center;
+    flex: 0;
+    margin: 20px 5% 141px;
 }
 
 
@@ -31,12 +53,31 @@
 
 
 .toolbox {
-    width: 320px;
+    min-width: 320px;
     margin-left: 50px;
     align-self: flex-start;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+}
+
+.player-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.player-block {
+    display: flex;
+    border: 2px solid #FAFAFA;
+    color:white;
+    flex-basis: 25%;
 }
 
 .toolbox .header {
+    height: max-content;
     border-radius: 10px 10px 0 0;
     background: #FAFAFA;
     font-family: 'Rubik', serif;
@@ -45,4 +86,6 @@
     font-size: 24px;
     align-items: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
