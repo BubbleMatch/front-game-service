@@ -14,6 +14,7 @@ function verification() {
         loaderText.appendChild(span);
     }
 }
+
 verification();
 
 window.onload = function () {
@@ -21,6 +22,9 @@ window.onload = function () {
 };
 
 export default function init() {
+
+    if (sourceImg == null) return;
+
     for (let i = 0; i < 100; i++) {
         const img = document.createElement('img');
         img.src = sourceImg.src;

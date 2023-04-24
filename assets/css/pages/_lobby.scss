@@ -1,0 +1,66 @@
+body.lobby {
+  display: flex;
+
+
+  .lobby-wrapper {
+    display: flex;
+    flex-basis: 50%;
+
+    height: 75vh;
+  }
+
+  .ready {
+    display: flex;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: auto;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    background-color: #FF4C50;
+    padding: 35px 150px;
+    animation: wiggle 2s linear infinite;
+
+    user-select: none;
+    -webkit-box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, -7px 2px 18px 50px rgba(0,0,0,0);
+    box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, -7px 2px 18px 50px rgba(0,0,0,0);
+    &:hover {
+
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+

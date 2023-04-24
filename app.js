@@ -7,6 +7,7 @@ var subdomain = require('express-subdomain');
 
 var gameRouter = require('./routes/game');
 var authRouter = require('./routes/auth');
+var lobbyRouter = require('./routes/lobby');
 
 var app = express();
 
@@ -21,6 +22,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(subdomain('auth', authRouter));
+app.use(subdomain('play', gameRouter));
+app.use(subdomain('lobby', lobbyRouter));
+
 app.use('/', gameRouter);
 
 
