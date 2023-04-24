@@ -17,6 +17,12 @@
     }
   }
 
+  .login {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .right {
     display: flex;
     flex-direction: row;

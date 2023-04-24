@@ -4,6 +4,9 @@ let toolboxSwitchValue = document.querySelector('.switch').children[0].classList
 let chat = document.querySelector('.toolbox > .chat');
 let playerWrapper = document.querySelector('.toolbox > .player-wrapper')
 
+import {init as chatInit} from "./chat";
+
+
 export function initToolbox() {
 
     toolboxSwitchBtn.onclick = function () {
@@ -24,4 +27,9 @@ export function initToolbox() {
                 break;
         }
     }
+
+
+    chatInit();
+
+
 }
