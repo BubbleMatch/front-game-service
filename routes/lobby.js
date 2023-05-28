@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+let packageVersion = require('./../helpers/package-version').version();
+
+/* GET lobby page. */
 router.get('/', function(req, res, next) {
-    res.render('lobby');
+    res.render('lobby', {
+        version: packageVersion
+    });
 });
 
 module.exports = router;
-1

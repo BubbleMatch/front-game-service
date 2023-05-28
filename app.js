@@ -3,11 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var subdomain = require('express-subdomain');
+const subdomain = require('express-subdomain');
 
-var gameRouter = require('./routes/game');
-var authRouter = require('./routes/auth');
-var lobbyRouter = require('./routes/lobby');
+const gameRouter = require('./routes/game');
+const authRouter = require('./routes/auth');
+const lobbyRouter = require('./routes/lobby');
 
 var app = express();
 
