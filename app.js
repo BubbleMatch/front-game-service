@@ -3,9 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const subdomain = require('express-subdomain');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const gameRouter = require('./routes/game');
+const authRouter = require('./routes/auth');
+const lobbyRouter = require('./routes/lobby');
 
 var app = express();
 
@@ -19,8 +21,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(subdomain('auth', authRouter));
+app.use(subdomain('play', gameRouter));
+app.use(subdomain('lobby', lobbyRouter));
+
+app.use('/', gameRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +46,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+

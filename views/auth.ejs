@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/dist/bmatch-public-<%= version %>.css">
+    <title>Auth page</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+<body class="auth">
+
+<%- include('partials/navmenu') %>
+
+<div class="loader-container">
+    <div class="loader-progress"></div>
+    <div class="loader-text">Bubble match</div>
+</div>
+
+<div class="wrapper">
+    <div class="signin-wrapper">
+        BUBBLE MATCH
+    </div>
+    <div class="edits-wrapper">
+        <div class="nav">
+            <input placeholder="Gmail" type="text">
+            <input placeholder="Password" type="password">
+            <div class="button">Create account</div>
+            <div class="info">
+                <div class="grey">Already have an account?</div>
+                <div class="red">Log in</div>
+            </div>
+            <div class="privacy">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/dist/bmatch-public-<%= version %>.js"></script>
+</body>
+</html>

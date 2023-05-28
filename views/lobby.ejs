@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/dist/bmatch-public-<%= version %>.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <title>Lobby#0000</title>
+</head>
+<body class="lobby">
+
+<%- include('partials/navmenu') %>
+
+<div class="loader-container">
+    <div class="loader-progress"></div>
+    <div class="loader-text">Bubble match</div>
+</div>
+
+
+<div class="wrapper">
+    <div class="lobby-wrapper">
+        <div class="player-wrapper">
+            <div class="player-block">
+                <div class="id active">
+                    1
+                </div>
+                <div class="info">
+                    <div class="left">
+                        <div class="img"></div>
+                    </div>
+                    <div class="right">
+                        <div class="nickname">nickname</div>
+                        <div class="mmr">1000pts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-block">
+                <div class="id">
+                    2
+                </div>
+                <div class="info">
+                    <div class="left">
+                        <div class="img"></div>
+                    </div>
+                    <div class="right">
+                        <div class="nickname">nickname</div>
+                        <div class="mmr">1000pts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-block">
+                <div class="id">
+                    3
+                </div>
+                <div class="info">
+                    <div class="left">
+                        <div class="img"></div>
+                    </div>
+                    <div class="right">
+                        <div class="nickname">nickname</div>
+                        <div class="mmr">1000pts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-block">
+                <div class="id">
+                    4
+                </div>
+                <div class="info">
+                    <div class="left">
+                        <div class="img"></div>
+                    </div>
+                    <div class="right">
+                        <div class="nickname">nickname</div>
+                        <div class="mmr">1000pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ready">
+    READY
+</div>
+
+<script src="/dist/bmatch-public-<%= version %>.js"></script>
+</body>
+</html>

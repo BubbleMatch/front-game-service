@@ -14,15 +14,16 @@ function verification() {
         loaderText.appendChild(span);
     }
 }
+
 verification();
 
 window.onload = function () {
     loadercontainer.style.display = 'none';
 };
 
+export default function init() {
 
-function init() {
-
+    if (sourceImg == null) return;
 
     for (let i = 0; i < 100; i++) {
         const img = document.createElement('img');
@@ -31,9 +32,14 @@ function init() {
         img.classList.add("item");
         img.id = `item${i}`
 
+        img.addEventListener('click', function () {
+            img.classList.add("opened")
+        })
+
         img.addEventListener('dragstart', (event) => {
             event.preventDefault();
         });
+
         img.addEventListener('dragover', (event) => {
             event.preventDefault();
         });
@@ -41,5 +47,3 @@ function init() {
         gamefield.insertAdjacentElement('afterbegin', img);
     }
 }
-
-init();
